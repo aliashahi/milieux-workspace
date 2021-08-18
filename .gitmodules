@@ -1,0 +1,3 @@
+[submodule "projects/milieux-sidenav"]
+	path = projects/milieux-sidenav
+	url = https://github.com/aliashahi/milieux-sidenav.git
