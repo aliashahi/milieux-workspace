@@ -7,12 +7,20 @@
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
-          "strict": true
+          "strict": false,
+          "style": "scss",
+          "skipTests": true,
+          "prefix": "milieux"
+        },
+        "@schematics/angular:component": {
+          "style": "scss",
+          "skipTests": true,
+          "prefix": "milieux"
         }
       },
       "root": "",
       "sourceRoot": "src",
-      "prefix": "app",
+      "prefix": "milieux",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -27,7 +35,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -94,7 +102,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/styles.scss"
             ],
             "scripts": []
           }
@@ -105,7 +113,7 @@
       "projectType": "library",
       "root": "projects/milieux-sidenav",
       "sourceRoot": "projects/milieux-sidenav/src",
-      "prefix": "lib",
+      "prefix": "milieux",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:ng-packagr",
