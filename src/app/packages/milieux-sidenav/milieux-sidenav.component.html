@@ -1,0 +1,33 @@
+<miliuex-sidenav
+  #sidenav
+  [sidenavItems]="items"
+  [style.width.vw]="100"
+  [style.height.vh]="100"
+  [closeChildrenOnParent]="false"
+  [soloExpand]="true"
+  [headerConfig]="headerConfig"
+  [footerConfig]="footerConfig"
+  [theme]="theme"
+  (navClicked)="navClicked($event)"
+>
+  <div class="container">
+    <div class="preview">
+      <img [src]="previewImgSrc" alt="preview.jpg" />
+    </div>
+    <div class="scrollview" id="scrollview">
+      <div class="scrollHandlerLeft">
+        <mat-icon (click)="onScroll('left')"> navigate_before </mat-icon>
+      </div>
+      <img
+        *ngFor="let imgUrl of imgUrlList"
+        [src]="imgUrl.id"
+        alt="picture.jpg"
+        (click)="onPreview(imgUrl)"
+        [ngClass]="{ focused: imgUrl.id == previewImgSrc }"
+      />
+      <div class="scrollHandlerLeft" [style.right.px]="25">
+        <mat-icon (click)="onScroll('right')"> navigate_next </mat-icon>
+      </div>
+    </div>
+  </div>
+</miliuex-sidenav>
