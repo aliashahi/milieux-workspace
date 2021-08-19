@@ -6,6 +6,8 @@ export const items: MilieuxSidenavItem[] = [
     label: 'General',
     icon: 'apps',
     opened: true,
+    hasDivider: true,
+    disabled: true,
     badge: 4,
     children: [
       {

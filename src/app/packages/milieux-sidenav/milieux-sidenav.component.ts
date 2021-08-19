@@ -3,15 +3,15 @@ import { MilieuxSidenavItem } from 'dist/sidenav';
 import { MilieuxHeaderConfig } from 'dist/sidenav';
 import { MilieuxFooterConfig } from 'dist/sidenav';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MilieuxTheme, SidenavComponent } from 'dist/sidenav';
+import { MilieuxTheme, MilieuxSidenavComponent } from 'dist/sidenav';
 
 @Component({
   selector: 'miliuex-sidenav-tab',
   templateUrl: './milieux-sidenav.component.html',
   styleUrls: ['./milieux-sidenav.component.scss'],
 })
-export class MilieuxSidenavComponent implements OnInit {
-  @ViewChild('sidenav') sidenav: SidenavComponent;
+export class MilieuxSidenavTabComponent implements OnInit {
+  @ViewChild('sidenav') sidenav: MilieuxSidenavComponent;
 
   headerConfig: MilieuxHeaderConfig = {
     label: 'Milieux SideNav',
@@ -22,8 +22,10 @@ export class MilieuxSidenavComponent implements OnInit {
   };
 
   theme: MilieuxTheme = {
-    backColor: '#161c2e',
-    color: 'white',
+    backColor: '#fcfbff',
+    backHoverColor: 'rgb(223 217 255)',
+    backFocusColor: '#efecff',
+    color: '#4b4c5d',
     openedWidth: 250,
     foldedWidth: 60,
     defaultpadding: 15,
@@ -45,22 +47,23 @@ export class MilieuxSidenavComponent implements OnInit {
   constructor() {
     this._items = items;
     this._imgUrlList = imgUrlList;
-    setInterval((i) => {
-      let index = Math.floor(Math.random() * this._imgUrlList.length);
-      this.previewImgSrc = this._imgUrlList[index].id;
-      this.sidenav.open(this._imgUrlList[index].id);
-      let element: HTMLElement = document.getElementById('scrollview');
-      element.scrollTo({
-        behavior: 'smooth',
-        left: 400 * index - 200,
-      });
-    }, 5000);
+    // setInterval((i) => {
+    //   let index = Math.floor(Math.random() * this._imgUrlList.length);
+    //   this.previewImgSrc = this._imgUrlList[index].id;
+    //   this.sidenav.open(this._imgUrlList[index].id);
+    //   let element: HTMLElement = document.getElementById('scrollview');
+    //   element.scrollTo({
+    //     behavior: 'smooth',
+    //     left: 400 * index - 200,
+    //   });
+    // }, 5000);
   }
 
   ngOnInit(): void {}
 
   navClicked($event: any) {
     this.previewImgSrc = $event.id;
+    console.log(1);
     this.sidenav.open($event.id);
   }
 
