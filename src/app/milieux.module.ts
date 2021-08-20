@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MaterialModule } from './modules/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MilieuxSidenavTabComponent } from './packages/milieux-sidenav/milieux-sidenav.component';
-import { MuilieuxSidenavModule } from 'dist/sidenav';
+import { MuilieuxSidenavModule } from '@milieux/sidenav';
 import { HttpClientModule } from '@angular/common/http';
 const PACKAGES = [MuilieuxSidenavModule];
 @NgModule({

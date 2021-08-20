@@ -13,7 +13,9 @@
       "milieux-sidenav": [
         "dist/milieux-sidenav/milieux-sidenav",
         "dist/milieux-sidenav"
-      ]
+      ],
+      "@milieux/sidenav":["dist/@milieux/sidenav"],
+      "@milieux/sidenav/*":["dist/@milieux/sidenav/*"]
     },
     "declaration": false,
     "downlevelIteration": true,

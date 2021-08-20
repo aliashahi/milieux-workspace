@@ -1,9 +1,9 @@
 import { imgUrlList, items } from './data';
-import { MilieuxSidenavItem } from 'dist/sidenav';
-import { MilieuxHeaderConfig } from 'dist/sidenav';
-import { MilieuxFooterConfig } from 'dist/sidenav';
+import { MilieuxSidenavItem } from '@milieux/sidenav';
+import { MilieuxHeaderConfig } from '@milieux/sidenav';
+import { MilieuxFooterConfig } from '@milieux/sidenav';
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { MilieuxTheme, MilieuxSidenavComponent } from 'dist/sidenav';
+import { MilieuxTheme, MilieuxSidenavComponent } from '@milieux/sidenav';
 
 @Component({
   selector: 'miliuex-sidenav-tab',

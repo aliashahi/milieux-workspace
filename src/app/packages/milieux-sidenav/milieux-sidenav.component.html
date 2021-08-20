@@ -6,13 +6,48 @@
   [style.height.vh]="100"
   [closeChildrenOnParent]="false"
   [soloExpand]="true"
+  [folded]="false"
   [headerConfig]="headerConfig"
   [footerConfig]="footerConfig"
   [theme]="theme"
   (childNavClicked)="navClicked($event)"
+  (footerEvents)="($event)"
+  (headerEvents)="($event)"
 >
   <div class="container">
-    <div class="preview">
+    <div
+      style="
+        margin: auto;
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: center;
+        cursor: pointer;
+      "
+    >
+      <span
+        (click)="onPreview(item)"
+        [class.selected]="item.id == previewImgSrc"
+        style="
+          width: 153px;
+          height: 50px;
+          background-color: white;
+          border-radius: 6px;
+          margin: 6px;
+          padding: 10px;
+          font-size: 25px;
+          text-align: center;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: gray;
+        "
+        *ngFor="let item of imgUrlList"
+        >{{ item.label }}</span
+      >
+    </div>
+    <!-- <div class="preview">
       <img [src]="previewImgSrc" alt="preview.jpg" />
     </div>
     <div class="scrollview" id="scrollview">
@@ -29,6 +64,6 @@
       <div class="scrollHandlerLeft" [style.right.px]="25">
         <mat-icon (click)="onScroll('right')"> navigate_next </mat-icon>
       </div>
-    </div>
+    </div> -->
   </div>
 </miliuex-sidenav>

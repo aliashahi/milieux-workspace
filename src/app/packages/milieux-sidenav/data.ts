@@ -1,4 +1,4 @@
-import { MilieuxSidenavItem } from 'dist/sidenav';
+import { MilieuxSidenavItem } from '@milieux/sidenav';
 
 export const items: MilieuxSidenavItem[] = [
   {

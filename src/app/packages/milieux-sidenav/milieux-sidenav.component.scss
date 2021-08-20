@@ -1,6 +1,7 @@
 .container {
   display: flex;
   flex-direction: column;
+  background-color: #dddddd;
   width: 100%;
   height: 100%;
   .preview {
@@ -68,4 +69,10 @@
   background-color: darkgrey;
   outline: 1px solid slategrey;
   border-radius: 10px;
+}
+
+.selected {
+  background-color: goldenrod !important;
+  filter: brightness(1.5);
+  box-shadow: 0 2px 26px honeydew;
 }
