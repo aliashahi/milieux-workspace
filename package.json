@@ -1,6 +1,6 @@
 {
   "name": "milieux-workspace",
-  "version": "0.0.0",
+  "version": "1.0.1",
   "scripts": {
     "ng": "ng",
     "start": "ng s -o --port 4301",
@@ -8,7 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "sidenav:s": "ng build milieux-sidenav --watch",
-    "sidenav:b": "ng build milieux-sidenav --prod"
+    "sidenav:b": "ng build milieux-sidenav"
   },
   "private": true,
   "dependencies": {
