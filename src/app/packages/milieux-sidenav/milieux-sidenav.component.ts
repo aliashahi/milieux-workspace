@@ -14,7 +14,8 @@ export class MilieuxSidenavTabComponent implements OnInit {
   @ViewChild('sidenav') sidenav: MilieuxSidenavComponent;
 
   headerConfig: MilieuxHeaderConfig = {
-    label: 'Milieux SideNav',
+    svgIcon: 'milieux',
+    label: 'Milieux',
   };
 
   footerConfig: MilieuxFooterConfig = {
@@ -63,7 +64,6 @@ export class MilieuxSidenavTabComponent implements OnInit {
 
   navClicked($event: any) {
     this.previewImgSrc = $event.id;
-    console.log(1);
     this.sidenav.open($event.id);
   }
 

@@ -7,7 +7,6 @@ export const items: MilieuxSidenavItem[] = [
     icon: 'apps',
     opened: true,
     hasDivider: true,
-    disabled: true,
     badge: 4,
     children: [
       {
@@ -26,6 +25,7 @@ export const items: MilieuxSidenavItem[] = [
           {
             id: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR86w9Q6heLsq1hSxgGghRN6hoamzb-FEzo3Q&usqp=CAU',
             label: 'car 2',
+            disabled: true,
           },
           {
             id: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpz2EsitIV4aBgtCrt3hTMrHyhUxVE2guqKw&usqp=CAU',
